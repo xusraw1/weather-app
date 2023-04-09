@@ -11,8 +11,8 @@ def home(request):
     city_info = {
         'city': city,
         'temp': res['main']['temp'],
-        'icon': res['weather']['icon'],
-        'country': res['sys']['country']
+        'icon': res['weather'][0]['icon'],
+        'country': res['sys']['country'],
     }
 
     context = {
