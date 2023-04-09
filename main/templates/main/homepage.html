@@ -10,8 +10,6 @@
     <header class="d-flex justify-content-center py-3">
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Погода.NET</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Главная</a></li>
         </ul>
     </header>
 </div>
@@ -19,9 +17,10 @@
     <div class="row">
         <div class="col-5 offset-1">
             <h1>Погода в вашем городе</h1>
-            <form action="" method="post"> {% csrf_token %}
-                <label for="city">Город</label>
+            <form action="" method="post">
                 {{ form.name }}
+                <label for="city">Город</label>
+                <input type="text" id=city name="city" class="form-control" placeholder="Введите город">
                 <input type="submit" name="send" value="Узнать" class="mt-2 btn btn-danger">
             </form>
         </div>
